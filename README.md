@@ -25,7 +25,7 @@ Contributing
 
 About the Game
 
-Tichu is a popular trick-taking card game based in chinese card games, traditionally played by four players in partnerships. This project aims to provide a seamless, online multiplayer experience with all the strategic depth of the original game.
+Tichu is a popular trick-taking card game based on chinese card games, traditionally played by four players in partnerships. This project aims to provide a seamless, online multiplayer experience with all the strategic depth of the original game.
 
 Features
 
