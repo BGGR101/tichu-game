@@ -10,6 +10,7 @@ This is an early build of a Java-based multiplayer **Tichu** card game implement
   - [Installation](#installation)
 - [Gameplay](#gameplay)
 - [Contributing](#contributing)
+- [License](#license)
   
 ---
 
@@ -50,3 +51,6 @@ We welcome contributions to enhance the project! Please follow these steps:
 1. **Fork the repository** and create a new branch for your feature.
 2. **Make your changes** and ensure code quality.
 3. **Submit a pull request** detailing the changes.
+
+## License
+Distributed under the MIT License. See [LICENSE](https://raw.githubusercontent.com/BGGR101/tichu-game/refs/heads/master/LICENSE) for more information.
