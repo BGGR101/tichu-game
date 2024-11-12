@@ -1,6 +1,6 @@
 Tichu Multiplayer Game
 
-A Java-based multiplayer Tichu card game implementation, built collaboratively by a team of friends. This project recreates the classic Chinese card game Tichu, offering an engaging, strategy-focused experience for both casual and competitive players. The main purpose of this project is learning and having fun.
+A Java-based multiplayer Tichu card game implementation, built collaboratively by a team of friends. This project recreates the card game Tichu, offering an engaging, strategy-focused experience for both casual and competitive players. The main purpose of this project is learning and having fun.
 
 Table of Contents
 
@@ -25,7 +25,7 @@ Contributing
 
 About the Game
 
-Tichu is a popular trick-taking card game with origins in China, traditionally played by four players in partnerships. This project aims to provide a seamless, online multiplayer experience with all the strategic depth of the original game.
+Tichu is a popular trick-taking card game based in chinese card games, traditionally played by four players in partnerships. This project aims to provide a seamless, online multiplayer experience with all the strategic depth of the original game.
 
 Features
 
