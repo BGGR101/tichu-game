@@ -3,7 +3,7 @@ public class Main {
 
         window window = new window();
         window.windowInit();
-        window.showOptions();
+        window.titleScreen();
 
 
     }
