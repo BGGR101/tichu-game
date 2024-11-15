@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 public class Window {
     private JPanel panel;
-    private JPanel singleplayerPanel;
+    private JPanel multiplayerPanel;
     private JFrame window;
 
 
@@ -32,24 +32,20 @@ public class Window {
         gbc.anchor = GridBagConstraints.CENTER;
 
 
-        JButton singleplayerButton = new JButton("Single-player");
-        singleplayerButton.setPreferredSize(new Dimension(300, 80));
-        singleplayerButton.setFont(new Font("Arial", Font.BOLD, 24));
-        singleplayerButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                singleplayerInit();
-            }
-        });
-
-        panel.add(singleplayerButton,gbc);
-        gbc.gridy++;
-
         JButton multiplayerButton = new JButton("Multi-player");
         multiplayerButton.setPreferredSize(new Dimension(300, 80));
         multiplayerButton.setFont(new Font("Arial", Font.BOLD, 24));
+        multiplayerButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                multiplayerInit();
+            }
+        });
+
         panel.add(multiplayerButton,gbc);
         gbc.gridy++;
+
 
         JButton exitButton = new JButton("Exit");
         exitButton.setPreferredSize(new Dimension(300, 80));
@@ -67,24 +63,24 @@ public class Window {
         panel.repaint();
     }
 
-public void singleplayerInit(){
+public void multiplayerInit(){
         window.remove(panel); //removes Title screen panel
 
-        singleplayerPanel = new JPanel(new GridBagLayout());
-        singleplayerPanel.setBackground(new Color(60, 63, 65));
+        multiplayerPanel = new JPanel(new GridBagLayout());
+        multiplayerPanel.setBackground(new Color(60, 63, 65));
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(20, 20, 20, 20);
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.anchor = GridBagConstraints.CENTER;
 
-        window.add(singleplayerPanel);
+        window.add(multiplayerPanel);
 
         window.revalidate();
         window.repaint();
 
-        SingleplayerGame game = new SingleplayerGame();
-        game.singleplayerStart();
+        MultiplayerGame game = new MultiplayerGame();
+        game.multiplayerStart();
     }
 
 }

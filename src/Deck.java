@@ -1,11 +1,17 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
 public class Deck {
+    private List<Card> deck;
 
-    public static List<Card> createDeck() {
-        List<Card> deck = new ArrayList<>();
+    public Deck() {
+        this.deck = new ArrayList<>();
+        initDeck();
+    }
+
+    public void initDeck() {
 
         // initialization of normal cards
         String[] colors = {"Blue", "Green", "Black", "Red"};
@@ -23,12 +29,19 @@ public class Deck {
 
 
         // initialization of special cards
-        deck.add(new Card(getPhoenixRank(), "Phoenix", "Special", "../Textures/deck/phoenix.png"));
+        deck.add(new Card(15, "Phoenix", "Special", "../Textures/deck/phoenix.png"));
         deck.add(new Card(16, "Dragon", "Special", "../Textures/deck/dragon.png"));
         deck.add(new Card(1, "Mahjong", "Special", "../Textures/deck/mahjong.png"));
         deck.add(new Card(0, "Dog","Special" , "../Textures/deck/dog.png"));
 
-        return deck;
 
+    }
+
+    public List<Card> getDeck() {
+        return deck;
+    }
+
+    public void deckShuffle(){
+        Collections.shuffle(deck);
     }
 }
