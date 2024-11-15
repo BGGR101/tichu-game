@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        window window = new window();
+        Window window = new Window();
         window.windowInit();
         window.titleScreen();
 

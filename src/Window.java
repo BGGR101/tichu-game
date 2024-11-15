@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class window {
+public class Window {
     private JPanel panel;
     private JPanel singleplayerPanel;
     private JFrame window;
@@ -83,7 +83,7 @@ public void singleplayerInit(){
         window.revalidate();
         window.repaint();
 
-        singleplayerGame game = new singleplayerGame();
+        SingleplayerGame game = new SingleplayerGame();
         game.singleplayerStart();
     }
 
