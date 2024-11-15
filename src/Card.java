@@ -8,6 +8,7 @@ public class Card {
     private String number;
     private String color;
     private BufferedImage image;
+    private BufferedImage backImage;
 
     //constructor
     public Card(int rank, String number, String color, String imagePath) {
@@ -17,6 +18,7 @@ public class Card {
 
     //exception
         try {
+            this.backImage = ImageIO.read(new File("../Textures/Deck/back.png"));
             this.image = ImageIO.read(new File(imagePath));
         } catch (IOException e) {
             System.err.println("Error loading image: " + imagePath);
