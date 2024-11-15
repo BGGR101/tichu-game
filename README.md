@@ -1,4 +1,4 @@
-# Tichu
+# Tichu (UNDER DEVELOPMENT)
 
 This is an early build of a Java-based multiplayer **Tichu** card game implementation, built collaboratively by a team of friends. This project recreates the classic card game *Tichu*, offering an engaging, strategy-focused experience for both casual and competitive players.
 
