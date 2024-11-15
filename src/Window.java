@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 
 public class Window {
     private JPanel panel;
-    private JPanel multiplayerPanel;
+    private JPanel hostGamePanel;
     private JFrame window;
 
 
@@ -32,10 +32,10 @@ public class Window {
         gbc.anchor = GridBagConstraints.CENTER;
 
 
-        JButton multiplayerButton = new JButton("Multi-player");
-        multiplayerButton.setPreferredSize(new Dimension(300, 80));
-        multiplayerButton.setFont(new Font("Arial", Font.BOLD, 24));
-        multiplayerButton.addActionListener(new ActionListener() {
+        JButton hostGameButton = new JButton("Host A Game");
+        hostGameButton.setPreferredSize(new Dimension(300, 80));
+        hostGameButton.setFont(new Font("Arial", Font.BOLD, 24));
+        hostGameButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
@@ -43,7 +43,7 @@ public class Window {
             }
         });
 
-        panel.add(multiplayerButton,gbc);
+        panel.add(hostGameButton,gbc);
         gbc.gridy++;
 
 
@@ -66,21 +66,20 @@ public class Window {
 public void multiplayerInit(){
         window.remove(panel); //removes Title screen panel
 
-        multiplayerPanel = new JPanel(new GridBagLayout());
-        multiplayerPanel.setBackground(new Color(60, 63, 65));
+        hostGamePanel = new JPanel(new GridBagLayout());
+        hostGamePanel.setBackground(new Color(60, 63, 65));
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(20, 20, 20, 20);
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.anchor = GridBagConstraints.CENTER;
 
-        window.add(multiplayerPanel);
+        window.add(hostGamePanel);
 
         window.revalidate();
         window.repaint();
 
-        MultiplayerGame game = new MultiplayerGame();
-        game.multiplayerStart();
+        //hostGame table = new hostGame;
     }
 
 }
