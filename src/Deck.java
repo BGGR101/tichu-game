@@ -23,7 +23,7 @@ public class Deck {
 
 
         // initialization of special cards
-        deck.add(new Card(phoenixRank, "Phoenix", "Special", "../Textures/deck/phoenix.png"));
+        deck.add(new Card(getPhoenixRank(), "Phoenix", "Special", "../Textures/deck/phoenix.png"));
         deck.add(new Card(16, "Dragon", "Special", "../Textures/deck/dragon.png"));
         deck.add(new Card(1, "Mahjong", "Special", "../Textures/deck/mahjong.png"));
         deck.add(new Card(0, "Dog","Special" , "../Textures/deck/dog.png"));
