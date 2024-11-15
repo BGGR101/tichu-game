@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 public class Window {
     private JPanel panel;
     private JPanel hostGamePanel;
+    private JPanel joinGamePanel;
     private JFrame window;
 
 
@@ -46,6 +47,19 @@ public class Window {
         panel.add(hostGameButton,gbc);
         gbc.gridy++;
 
+        JButton joinGameButton = new JButton("Join A Game");
+        joinGameButton.setPreferredSize(new Dimension(300, 80));
+        joinGameButton.setFont(new Font("Arial", Font.BOLD, 24));
+        joinGameButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                joinGameInit();
+            }
+        });
+
+        panel.add(joinGameButton,gbc);
+        gbc.gridy++;
 
         JButton exitButton = new JButton("Exit");
         exitButton.setPreferredSize(new Dimension(300, 80));
@@ -81,5 +95,22 @@ public void multiplayerInit(){
 
         //hostGame table = new hostGame;
     }
+    public void joinGameInit(){
+        window.remove(panel); //removes Title screen panel
 
+        joinGamePanel = new JPanel(new GridBagLayout());
+        joinGamePanel.setBackground(new Color(60, 63, 65));
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(20, 20, 20, 20);
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.anchor = GridBagConstraints.CENTER;
+
+        window.add(joinGamePanel);
+
+        window.revalidate();
+        window.repaint();
+
+        //hostGame table = new hostGame;
+    }
 }
