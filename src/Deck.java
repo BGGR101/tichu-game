@@ -8,8 +8,8 @@ public class Deck {
         List<Card> deck = new ArrayList<>();
 
         // initialization of normal cards
-        String[] colors = {"Blue", "Green", "Black", "Red"};
-        String[] numbers = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
+        String[] colors = {"Blue", "Green", "Black", "Red", "Special"};
+        String[] numbers = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace", "Special"};
         int[] ranks = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
 
 
