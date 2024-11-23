@@ -8,10 +8,10 @@ public class MultiplayerGame {
         // Deck initialization
         Deck deck = new Deck();
 
-        // Deck suffle
+        // Deck suffling
         deck.deckShuffle();
 
-        // Players Initialiazation
+        // Players Initialization
         List<Player> players = new ArrayList<>();
         players.add(new Player("Player 1"));
         players.add(new Player("Player 2"));
