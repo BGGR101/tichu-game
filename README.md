@@ -44,7 +44,7 @@ Follow these steps to get the project up and running locally.
 - **Objective**: Be the first team to score 1,000 points.
 - **Special Cards**: Includes Mahjong, Dog, Phoenix, and Dragon cards, each with unique effects.
 
-For a complete breakdown of rules, see the wiki.
+For a complete breakdown of rules, see the [wiki](https://en.namu.wiki/w/%ED%8B%B0%EC%B8%84).
 
 ## Contributing
 We welcome contributions to enhance the project! Please follow these steps:
