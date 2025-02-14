@@ -39,7 +39,6 @@ public class Window {
         hostGameButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 multiplayerInit();
             }
         });
@@ -88,10 +87,30 @@ public void multiplayerInit(){
         gbc.gridy = 0;
         gbc.anchor = GridBagConstraints.CENTER;
 
+        //Host initialization
+        JLabel hostNameLabel = new JLabel("Enter host name:");
+        hostNameLabel.setFont(new Font("Arial", Font.BOLD, 24));
+        hostNameLabel.setForeground(Color.WHITE);
+        hostGamePanel.add(hostNameLabel, gbc);
+        gbc.gridy++;
+
+        final JTextField hostName = new JTextField();
+        hostName.setPreferredSize(new Dimension(200, 50));
+        hostName.setFont(new Font("Arial", Font.BOLD, 24));
+        hostGamePanel.add(hostName, gbc);
+        hostName.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String name = hostName.getText();
+                System.out.println(name);
+            }
+        });
         window.add(hostGamePanel);
 
         window.revalidate();
         window.repaint();
+
+
 
         //hostGame table = new hostGame;
     }
