@@ -13,6 +13,7 @@ public class Window {
 
     public void windowInit(){
         window = new JFrame("Tichu");
+        window.setIconImage(new ImageIcon ("Textures/logo.png").getImage());
         window.setSize(1600, 900);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setLocationRelativeTo(null);
