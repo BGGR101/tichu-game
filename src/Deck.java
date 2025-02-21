@@ -44,4 +44,12 @@ public class Deck {
     public void deckShuffle(){
         Collections.shuffle(deck);
     }
+
+    public void removeCard(int index){
+        deck.remove(index);
+    }
+
+    public void setPhoenixRank(float rank){
+        deck.get(52).setRank(rank);
+    }
 }

@@ -4,14 +4,14 @@ import java.io.File;
 import java.io.IOException;
 
 public class Card {
-    private int rank;
+    private float rank;
     private String number;
     private String color;
     private BufferedImage image;
     private BufferedImage backImage;
 
     //constructor
-    public Card(int rank, String number, String color, String imagePath) {
+    public Card(float rank, String number, String color, String imagePath) {
         this.rank = rank;
         this.number = number;
         this.color = color;
@@ -34,7 +34,7 @@ public class Card {
         return image;
     }
 
-    public int getRank() {
+    public float getRank() {
         return rank;
     }
 
@@ -42,5 +42,9 @@ public class Card {
         return color;
     }
 
+    //Rank setter
+    public void setRank(float rank) {
+        this.rank = rank;
+    }
 
 }

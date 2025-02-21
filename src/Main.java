@@ -4,7 +4,5 @@ public class Main {
         Window window = new Window();
         window.windowInit();
         window.titleScreen();
-
-
     }
 }
