@@ -76,7 +76,7 @@ public class Window {
         panel.repaint();
     }
 
-public void multiplayerInit(){
+private void multiplayerInit(){
         window.remove(panel); //removes Title screen panel
 
         //Host panel initialization
@@ -131,16 +131,15 @@ public void multiplayerInit(){
         window.revalidate();
         window.repaint();
 
-        hostName.addActionListener(new ActionListener() {
+        hostButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String name = hostName.getText();
-                new Game(window, name);
+                hostGame(name);
             }
         });
-
     }
-    public void joinGameInit() {
+    private void joinGameInit() {
         window.remove(panel); // Removes Title screen panel
 
         // Join panel initialization
@@ -214,7 +213,11 @@ public void multiplayerInit(){
         window.repaint();
     }
 
-    public void tableJoin(String name, String ip){
+    private void hostGame(String name){
+        new Game(window, name);
+    }
+
+    private void tableJoin(String name, String ip){
         //TODO: Implement tableJoin
     }
 }
