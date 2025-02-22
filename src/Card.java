@@ -10,20 +10,28 @@ public class Card {
     private BufferedImage image;
     private BufferedImage backImage;
 
-    //constructor
+    //Constructor for normal cards
     public Card(float rank, String number, String color, String imagePath) {
         this.rank = rank;
         this.number = number;
         this.color = color;
-
-    //exception
+        loadImages(imagePath);
+    }
+    //Protected constructor for special cards
+    protected Card(float rank, String number, String color) {
+        this.rank = rank;
+        this.number = number;
+        this.color = color;
+        loadImages("../Textures/Deck/" + number.toLowerCase() + ".png");
+    }
+    //load images
+    private void loadImages(String imagePath) {
         try {
-            this.backImage = ImageIO.read(new File("../Textures/Deck/back.png"));
             this.image = ImageIO.read(new File(imagePath));
+            this.backImage = ImageIO.read(new File("../Textures/Deck/back.png"));
         } catch (IOException e) {
             System.err.println("Error loading image: " + imagePath);
         }
-
     }
     //Getters
     public String getNumber(){

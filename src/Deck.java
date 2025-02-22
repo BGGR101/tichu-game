@@ -27,16 +27,14 @@ public class Deck {
             }
         }
 
-
         // initialization of special cards
-        deck.add(new Card(15, "Phoenix", "Special", "../Textures/deck/phoenix.png"));
-        deck.add(new Card(16, "Dragon", "Special", "../Textures/deck/dragon.png"));
-        deck.add(new Card(1, "Mahjong", "Special", "../Textures/deck/mahjong.png"));
-        deck.add(new Card(0, "Dog","Special" , "../Textures/deck/dog.png"));
-
+        deck.add(new Phoenix());
+        deck.add(new Dragon());
+        deck.add(new Mahjong());
+        deck.add(new Dog());
 
     }
-
+    //Perhaps temporary
     public List<Card> getDeck() {
         return deck;
     }
@@ -47,9 +45,5 @@ public class Deck {
 
     public void removeCard(int index){
         deck.remove(index);
-    }
-
-    public void setPhoenixRank(float rank){
-        deck.get(52).setRank(rank);
     }
 }

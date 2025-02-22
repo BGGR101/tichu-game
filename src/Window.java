@@ -72,8 +72,6 @@ public class Window {
                 System.exit(0);
             }
         });
-
-
         panel.revalidate();
         panel.repaint();
     }
@@ -130,7 +128,6 @@ public void multiplayerInit(){
         hostButton.setFont(new Font("Arial", Font.BOLD, 24));
         hostGamePanel.add(hostButton, gbc);
 
-
         window.revalidate();
         window.repaint();
 
@@ -138,7 +135,7 @@ public void multiplayerInit(){
             @Override
             public void actionPerformed(ActionEvent e) {
                 String name = hostName.getText();
-                tableInit(name, "localhost");
+                new Game(window, name);
             }
         });
 
@@ -205,7 +202,7 @@ public void multiplayerInit(){
         joinButton.addActionListener(e -> {
             String name = joinName.getText();
             String ip = joinIP.getText();
-            tableInit(name, ip);
+            tableJoin(name, ip);
         });
 
         // Allow the last component to take remaining vertical space
@@ -217,20 +214,7 @@ public void multiplayerInit(){
         window.repaint();
     }
 
-    public void tableInit(String name, String ip){
-        window.remove(hostGamePanel); //removes HostGame panel
-
-        JPanel tablePanel = new JPanel(new GridBagLayout());
-        tablePanel.setBackground(new Color(60, 63, 65));
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(20, 20, 20, 20);
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.anchor = GridBagConstraints.CENTER;
-
-        window.add(tablePanel);
-
-        window.revalidate();
-        window.repaint();
+    public void tableJoin(String name, String ip){
+        //TODO: Implement tableJoin
     }
 }
