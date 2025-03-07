@@ -7,23 +7,27 @@ public class Window {
     private JPanel panel;
     private JPanel hostGamePanel;
     private JPanel joinGamePanel;
-    private JFrame window;
+    private JFrame mainWindowFrame;
 
+    public Window() {
+        windowInit();
+    }
 
 
     public void windowInit(){
-        window = new JFrame("Tichu");
-        window.setIconImage(new ImageIcon ("Textures/logo.png").getImage());
-        window.setSize(1600, 900);
-        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        window.setLocationRelativeTo(null);
-        window.setResizable(false);
+        mainWindowFrame = new JFrame("Tichu");
+        mainWindowFrame.setIconImage(new ImageIcon ("Textures/logo.png").getImage());
+        mainWindowFrame.setSize(1600, 900);
+        mainWindowFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        mainWindowFrame.setLocationRelativeTo(null);
+        mainWindowFrame.setResizable(false);
 
         panel = new JPanel(new GridBagLayout());
         panel.setBackground(new Color(60, 63, 65));
-        window.add(panel, BorderLayout.CENTER);
+        mainWindowFrame.add(panel, BorderLayout.CENTER);
 
-        window.setVisible(true);
+        mainWindowFrame.setVisible(true);
+        titleScreen();
     }
 
     public void titleScreen(){
@@ -77,7 +81,7 @@ public class Window {
     }
 
 private void multiplayerInit(){
-        window.remove(panel); //removes Title screen panel
+        mainWindowFrame.remove(panel); //removes Title screen panel
 
         //Host panel initialization
         hostGamePanel = new JPanel(new GridBagLayout());
@@ -93,8 +97,8 @@ private void multiplayerInit(){
         backButton.setPreferredSize(new Dimension(180, 50));
         backButton.setFont(new Font("Arial", Font.BOLD, 24));
         backButton.addActionListener(e -> {
-            window.remove(hostGamePanel);
-            window.add(panel);
+            mainWindowFrame.remove(hostGamePanel);
+            mainWindowFrame.add(panel);
             titleScreen();
         });
 
@@ -118,7 +122,7 @@ private void multiplayerInit(){
         hostName.setPreferredSize(new Dimension(180, 50));
         hostName.setFont(new Font("Arial", Font.BOLD, 24));
         hostGamePanel.add(hostName, gbc);
-        window.add(hostGamePanel);
+        mainWindowFrame.add(hostGamePanel);
 
         gbc.gridy++;
         gbc.weighty = 1.0;
@@ -128,8 +132,8 @@ private void multiplayerInit(){
         hostButton.setFont(new Font("Arial", Font.BOLD, 24));
         hostGamePanel.add(hostButton, gbc);
 
-        window.revalidate();
-        window.repaint();
+        mainWindowFrame.revalidate();
+        mainWindowFrame.repaint();
 
         hostButton.addActionListener(new ActionListener() {
             @Override
@@ -140,7 +144,7 @@ private void multiplayerInit(){
         });
     }
     private void joinGameInit() {
-        window.remove(panel); // Removes Title screen panel
+        mainWindowFrame.remove(panel); // Removes Title screen panel
 
         // Join panel initialization
         joinGamePanel = new JPanel(new GridBagLayout());
@@ -156,8 +160,8 @@ private void multiplayerInit(){
         backButton.setPreferredSize(new Dimension(180, 50));
         backButton.setFont(new Font("Arial", Font.BOLD, 24));
         backButton.addActionListener(e -> {
-            window.remove(joinGamePanel);
-            window.add(panel);
+            mainWindowFrame.remove(joinGamePanel);
+            mainWindowFrame.add(panel);
             titleScreen();
         });
         joinGamePanel.add(backButton, gbc);
@@ -208,16 +212,24 @@ private void multiplayerInit(){
         gbc.weighty = 1.0;
         joinGamePanel.add(joinButton, gbc);
 
-        window.add(joinGamePanel);
-        window.revalidate();
-        window.repaint();
+        mainWindowFrame.add(joinGamePanel);
+        mainWindowFrame.revalidate();
+        mainWindowFrame.repaint();
     }
 
     private void hostGame(String name){
-        new Game(window, name);
+        new Game(this, name);
     }
 
     private void tableJoin(String name, String ip){
         //TODO: Implement tableJoin
+    }
+
+    public JFrame getWindowFrame() {
+        return mainWindowFrame;
+    }
+
+    public JPanel getMainPanel() {
+        return panel;
     }
 }
