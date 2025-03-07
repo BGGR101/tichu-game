@@ -15,6 +15,8 @@ public class Game {
     private JPanel westPlayerPanel;
     private JLabel team1ScoreLabel;
     private JLabel team2ScoreLabel;
+    private int team1Score = 0;
+    private int team2Score = 0;
 
     public Game(Window window, String name) {
         this.window = window;
@@ -90,12 +92,12 @@ public class Game {
         panel.setBackground(new Color(60, 63, 65));
         panel.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
 
-        team1ScoreLabel = new JLabel("Team 1: 0");
-        team2ScoreLabel = new JLabel("Team 2: 0");
+        team1ScoreLabel = new JLabel("Team 1: " + team1Score);
+        team2ScoreLabel = new JLabel("Team 2: " + team2Score);
         team1ScoreLabel.setForeground(Color.WHITE);
         team2ScoreLabel.setForeground(Color.WHITE);
-        team1ScoreLabel.setFont(new Font("Arial", Font.BOLD, 14));
-        team2ScoreLabel.setFont(new Font("Arial", Font.BOLD, 14));
+        team1ScoreLabel.setFont(new Font("Arial", Font.BOLD, 16));
+        team2ScoreLabel.setFont(new Font("Arial", Font.BOLD, 16));
 
         panel.add(team1ScoreLabel);
         panel.add(Box.createVerticalStrut(5));
@@ -120,11 +122,14 @@ public class Game {
 
     private JButton setupTichuButton() {
         JButton tichuButton = new JButton("Tichu");
-        tichuButton.setPreferredSize(new Dimension(180, 50));
+        Dimension size = new Dimension(200, 50);
+        tichuButton.setPreferredSize(size);
+        tichuButton.setMaximumSize(size);
         tichuButton.setFont(new Font("Arial", Font.BOLD, 24));
         tichuButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
+                tichuButton.setEnabled(false);
                 // Implement Tichu call
             }
         });
@@ -133,11 +138,14 @@ public class Game {
 
     private JButton setupGrandTichuButton() {
         JButton grandTichuButton = new JButton("Grand Tichu");
-        grandTichuButton.setPreferredSize(new Dimension(180, 50));
+        Dimension size = new Dimension(200, 50);
+        grandTichuButton.setPreferredSize(size);
+        grandTichuButton.setMaximumSize(size);
         grandTichuButton.setFont(new Font("Arial", Font.BOLD, 24));
         grandTichuButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
+                grandTichuButton.setEnabled(false);
                 // Implement Grand Tichu call
             }
         });
