@@ -1,3 +1,5 @@
+package com.tichu;
+
 import com.tichu.ui.Window;
 
 public class Main {
