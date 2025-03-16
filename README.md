@@ -3,7 +3,7 @@
 This is an early build of a Java-based multiplayer **Tichu** card game implementation, built collaboratively by a team of friends. This project recreates the classic card game *Tichu*, offering an engaging, strategy-focused experience for both casual and competitive players.
 
 ## Table of Contents
-- [About the com.tichu.ui.GameWindow](#about-the-game)
+- [About the Game](#about-the-game)
 - [Features](#features)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
@@ -46,7 +46,7 @@ Follow these steps to get the project up and running locally.
     ```
 3. **Run the project**:
     ```bash
-    mvn exec:java "-Dexec.mainClass=com.tichu.Main"
+    mvn exec:java
     ```
 
 ## Gameplay
