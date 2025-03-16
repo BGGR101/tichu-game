@@ -31,6 +31,7 @@ Follow these steps to get the project up and running locally.
 ### Prerequisites
 
 - **Java Development Kit (JDK) 23** or higher
+- **Maven** for build and dependency management
 
 ### Installation
 
@@ -39,6 +40,15 @@ Follow these steps to get the project up and running locally.
    git clone https://github.com/BGGR101/tichu-game.git
    cd tichu-game
    ```
+2. **Build the project using Maven**:
+   ```bash
+    mvn clean compile
+    ```
+3. **Run the project**:
+    ```bash
+    mvn exec:java "-Dexec.mainClass=com.tichu.Main"
+    ```
+
 ## Gameplay
 - **Setup**: Four players, paired into two teams.
 - **Objective**: Be the first team to score 1,000 points.
