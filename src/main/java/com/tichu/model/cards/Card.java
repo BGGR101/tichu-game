@@ -24,13 +24,13 @@ public class Card {
         this.rank = rank;
         this.number = number;
         this.color = color;
-        loadImages("../Textures/com.tichu.model.Deck/" + number.toLowerCase() + ".png");
+        loadImages("../Textures/Deck/" + number.toLowerCase() + ".png");
     }
     //load images
     private void loadImages(String imagePath) {
         try {
             this.image = ImageIO.read(new File(imagePath));
-            this.backImage = ImageIO.read(new File("../Textures/com.tichu.model.Deck/back.png"));
+            this.backImage = ImageIO.read(new File("../Textures/Deck/back.png"));
         } catch (IOException e) {
             System.err.println("Error loading image: " + imagePath);
         }

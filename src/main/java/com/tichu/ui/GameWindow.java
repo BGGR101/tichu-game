@@ -66,7 +66,7 @@ public class GameWindow {
         bottomPanel.add(specialButtonsPanel, BorderLayout.WEST);
         bottomPanel.add(southPlayerPanel, BorderLayout.CENTER);
 
-        // com.tichu.model.cards.Card panel setup
+        // Card panel setup
         cardPanel = new JPanel();
         cardPanel.setBackground(new Color(80, 80, 80));
 

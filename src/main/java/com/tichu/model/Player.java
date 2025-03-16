@@ -16,7 +16,7 @@ public class Player {
     private boolean tichu;
     private BufferedImage playerImage;
 
-    //com.tichu.model.Player Constructor
+    //Player Constructor
     public Player(String name) {
         this.name =  name;
         this.grand = false;
