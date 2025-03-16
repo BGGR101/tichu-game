@@ -14,7 +14,7 @@ This is an early build of a Java-based multiplayer **Tichu** card game implement
   
 ---
 
-## About the com.tichu.ui.GameWindow
+## About the Game
 
 *Tichu* is a popular trick-taking card game, traditionally played by four players in partnerships. This project aims to provide a seamless, online multiplayer experience with all the strategic depth of the original game.
 
