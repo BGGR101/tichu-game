@@ -1,3 +1,5 @@
+package com.tichu.ui;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -218,7 +220,7 @@ private void multiplayerInit(){
     }
 
     private void hostGame(String name){
-        new Game(this, name);
+        new GameWindow(this, name);
     }
 
     private void tableJoin(String name, String ip){

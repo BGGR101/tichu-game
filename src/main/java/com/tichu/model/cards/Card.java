@@ -1,3 +1,5 @@
+package com.tichu.model.cards;
+
 import java.awt.image.BufferedImage;
 import javax.imageio.ImageIO;
 import java.io.File;
@@ -22,13 +24,13 @@ public class Card {
         this.rank = rank;
         this.number = number;
         this.color = color;
-        loadImages("../Textures/Deck/" + number.toLowerCase() + ".png");
+        loadImages("../Textures/com.tichu.model.Deck/" + number.toLowerCase() + ".png");
     }
     //load images
     private void loadImages(String imagePath) {
         try {
             this.image = ImageIO.read(new File(imagePath));
-            this.backImage = ImageIO.read(new File("../Textures/Deck/back.png"));
+            this.backImage = ImageIO.read(new File("../Textures/com.tichu.model.Deck/back.png"));
         } catch (IOException e) {
             System.err.println("Error loading image: " + imagePath);
         }

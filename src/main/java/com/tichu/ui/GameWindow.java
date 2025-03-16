@@ -1,10 +1,12 @@
+package com.tichu.ui;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class Game {
-    private Window window;
+public class GameWindow {
+    private com.tichu.ui.Window window;
     private JFrame frame;
     private boolean gameStart = false;
     private String name;
@@ -18,7 +20,7 @@ public class Game {
     private int team1Score = 0;
     private int team2Score = 0;
 
-    public Game(Window window, String name) {
+    public GameWindow(Window window, String name) {
         this.window = window;
         this.frame = window.getWindowFrame();
         this.name = name;
@@ -64,7 +66,7 @@ public class Game {
         bottomPanel.add(specialButtonsPanel, BorderLayout.WEST);
         bottomPanel.add(southPlayerPanel, BorderLayout.CENTER);
 
-        // Card panel setup
+        // com.tichu.model.cards.Card panel setup
         cardPanel = new JPanel();
         cardPanel.setBackground(new Color(80, 80, 80));
 

@@ -1,3 +1,7 @@
+package com.tichu.model;
+
+import com.tichu.model.cards.*;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

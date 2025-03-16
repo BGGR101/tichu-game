@@ -1,3 +1,7 @@
+package com.tichu.model;
+
+import com.tichu.model.cards.Card;
+
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -12,7 +16,7 @@ public class Player {
     private boolean tichu;
     private BufferedImage playerImage;
 
-    //Player Constructor
+    //com.tichu.model.Player Constructor
     public Player(String name) {
         this.name =  name;
         this.grand = false;

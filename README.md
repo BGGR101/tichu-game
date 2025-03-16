@@ -3,7 +3,7 @@
 This is an early build of a Java-based multiplayer **Tichu** card game implementation, built collaboratively by a team of friends. This project recreates the classic card game *Tichu*, offering an engaging, strategy-focused experience for both casual and competitive players.
 
 ## Table of Contents
-- [About the Game](#about-the-game)
+- [About the com.tichu.ui.GameWindow](#about-the-game)
 - [Features](#features)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
@@ -14,14 +14,14 @@ This is an early build of a Java-based multiplayer **Tichu** card game implement
   
 ---
 
-## About the Game
+## About the com.tichu.ui.GameWindow
 
 *Tichu* is a popular trick-taking card game, traditionally played by four players in partnerships. This project aims to provide a seamless, online multiplayer experience with all the strategic depth of the original game.
 
 ## Features
 - **Multiplayer Support**: Play with friends in real-time.
 - **Accurate Tichu Rules**: Complete rule set for authentic gameplay.
-- **Robust Game Mechanics**: Includes support for calls, bombs, and scoring.
+- **Robust com.tichu.ui.GameWindow Mechanics**: Includes support for calls, bombs, and scoring.
 - **User-friendly Interface**: Intuitive game interface to enhance player experience.
   
 ## Getting Started
@@ -42,7 +42,7 @@ Follow these steps to get the project up and running locally.
 ## Gameplay
 - **Setup**: Four players, paired into two teams.
 - **Objective**: Be the first team to score 1,000 points.
-- **Special Cards**: Includes Mahjong, Dog, Phoenix, and Dragon cards, each with unique effects.
+- **Special Cards**: Includes com.tichu.model.cards.Mahjong, com.tichu.model.cards.Dog, com.tichu.model.cards.Phoenix, and com.tichu.model.cards.Dragon cards, each with unique effects.
 
 For a complete breakdown of rules, see the [wiki](https://en.namu.wiki/w/%ED%8B%B0%EC%B8%84).
 
