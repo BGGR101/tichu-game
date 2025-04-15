@@ -224,7 +224,7 @@ private void multiplayerInit(){
     }
 
     private void tableJoin(String name, String ip){
-        //TODO: Implement tableJoin
+        new GameWindow(this, name, ip);
     }
 
     public JFrame getWindowFrame() {

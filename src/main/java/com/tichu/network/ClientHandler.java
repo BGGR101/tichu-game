@@ -1,5 +1,7 @@
 package com.tichu.network;
 
+import com.tichu.model.Player;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -11,6 +13,7 @@ public class ClientHandler extends Thread {
     private BufferedReader in;
     private PrintWriter out;
     private GameRoom room;
+    private Player player;
 
     public ClientHandler(Socket socket, GameRoom room) {
         this.socket = socket;
@@ -35,5 +38,13 @@ public class ClientHandler extends Thread {
 
     public void send(String message) {
         out.println(message);
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void createPlayer(String name) {
+        this.player = new Player(name);
     }
 }

@@ -1,5 +1,7 @@
 package com.tichu.ui;
 
+import com.tichu.network.GameRoom;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -20,11 +22,21 @@ public class GameWindow {
     private int team1Score = 0;
     private int team2Score = 0;
 
+    //Constructor for Host
     public GameWindow(Window window, String name) {
         this.window = window;
         this.frame = window.getWindowFrame();
         this.name = name;
         setupGameUI();
+    }
+
+    //Constructor for Join
+    public GameWindow(Window window, String name, String ip){
+        this.window = window;
+        this.frame = window.getWindowFrame();
+        this.name = name;
+        setupGameUI();
+
     }
 
     private void setupGameUI() {
