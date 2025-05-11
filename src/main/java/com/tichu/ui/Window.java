@@ -1,5 +1,7 @@
 package com.tichu.ui;
 
+import com.tichu.network.RelayServerLauncher;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -220,6 +222,15 @@ private void multiplayerInit(){
     }
 
     private void hostGame(String name){
+        RelayServerLauncher.startRelayServerInBackground();
+
+        //Wait for the server to bind
+        try {
+            Thread.sleep(300);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         new GameWindow(this, name);
     }
 
