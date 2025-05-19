@@ -45,24 +45,25 @@ public class GameWindow {
 
         // Initialize player panels
         northPlayerPanel = createPlayerPanel("");
-        eastPlayerPanel = createPlayerPanel("");
-        westPlayerPanel = createPlayerPanel("");
+        eastPlayerPanel = createSidePlayerPanel("");
+        westPlayerPanel = createSidePlayerPanel("");
         southPlayerPanel = createPlayerPanel(name);
 
         // Back button and score panel
-        JButton backButton = setupBackButton();
+        JButton backButton = createBackButton();
         JPanel scorePanel = createScorePanel();
 
         // Control panel for back button and scores
         JPanel controlPanel = new JPanel(new BorderLayout());
-        controlPanel.add(backButton, BorderLayout.WEST);
+
         controlPanel.add(scorePanel, BorderLayout.EAST);
         controlPanel.setBackground(new Color(60, 63, 65));
 
         // North container to hold northPlayerPanel and controlPanel
         JPanel northContainer = new JPanel(new BorderLayout());
         northContainer.add(northPlayerPanel, BorderLayout.CENTER);
-        northContainer.add(controlPanel, BorderLayout.SOUTH);
+        northContainer.add(backButton, BorderLayout.WEST);
+        northContainer.add(controlPanel, BorderLayout.EAST);
 
         // Bottom panel for southPlayerPanel and Tichu buttons
         JPanel bottomPanel = new JPanel(new BorderLayout());
@@ -97,7 +98,35 @@ public class GameWindow {
         JPanel playerPanel = new JPanel();
         playerPanel.setBackground(new Color(60, 63, 65));
         playerPanel.setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10));
+        if (playerLabel.equals("")) {
+            ImageIcon playerIcon = new ImageIcon(getClass().getResource("/Textures/not-joined.png"));
+
+            playerIcon.setImage(playerIcon.getImage().getScaledInstance(70, 70, Image.SCALE_SMOOTH));
+            JLabel playerNameLabel = new JLabel(playerLabel);
+
+            playerPanel.add(playerNameLabel);
+            playerPanel.add(new JLabel(playerIcon));
+        }
+
         return playerPanel;
+    }
+
+    private JPanel createSidePlayerPanel(String playerLabel) {
+        JPanel wrapper = new JPanel(new GridBagLayout());
+        wrapper.setBackground(new Color(60, 63, 65));
+
+        JPanel content = new JPanel();
+        content.setBackground(new Color(60, 63, 65));
+        content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
+
+        ImageIcon playerIcon = new ImageIcon(getClass().getResource("/Textures/not-joined.png"));
+        playerIcon.setImage(playerIcon.getImage().getScaledInstance(70, 70, Image.SCALE_SMOOTH));
+        JLabel label = new JLabel(playerIcon);
+        content.add(label);
+
+        wrapper.add(content, new GridBagConstraints());
+
+        return wrapper;
     }
 
     private JPanel createScorePanel() {
@@ -120,7 +149,7 @@ public class GameWindow {
         return panel;
     }
 
-    private JButton setupBackButton() {
+    private JButton createBackButton() {
         JButton backButton = new JButton("Back");
         backButton.setPreferredSize(new Dimension(180, 50));
         backButton.setFont(new Font("Arial", Font.BOLD, 24));

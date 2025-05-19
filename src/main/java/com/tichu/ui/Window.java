@@ -20,7 +20,7 @@ public class Window {
 
     public void windowInit(){
         mainWindowFrame = new JFrame("Tichu");
-        mainWindowFrame.setIconImage(new ImageIcon ("Textures/logo.png").getImage());
+        mainWindowFrame.setIconImage(new ImageIcon (getClass().getResource("/Textures/logo.png")).getImage());
         mainWindowFrame.setSize(1600, 900);
         mainWindowFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainWindowFrame.setLocationRelativeTo(null);
