@@ -50,7 +50,7 @@ public class GameWindow {
         southPlayerPanel = createPlayerPanel(name);
 
         // Back button and score panel
-        JButton backButton = createBackButton();
+        JButton backButton = setupBackButton();
         JPanel scorePanel = createScorePanel();
 
         // Control panel for back button and scores
@@ -149,7 +149,7 @@ public class GameWindow {
         return panel;
     }
 
-    private JButton createBackButton() {
+    private JButton setupBackButton() {
         JButton backButton = new JButton("Back");
         backButton.setPreferredSize(new Dimension(180, 50));
         backButton.setFont(new Font("Arial", Font.BOLD, 24));
